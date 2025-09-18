@@ -1,0 +1,11 @@
+services:
+  evaluador:
+    build:
+      context: ./python-services
+    container_name: evaluador-ml
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+volumes:
+  db_data:
